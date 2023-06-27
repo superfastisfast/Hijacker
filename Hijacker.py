@@ -38,13 +38,6 @@ try:
     import socket
 
     try:
-        from discord_webhook import DiscordWebhook
-    except:
-        os.system("pip install discord_webhook")
-        from discord_webhook import DiscordWebhook
-        os.system('cls')
-
-    try:
         from mailtm import Email
     except:
         os.system("pip install mailtm")
@@ -87,8 +80,6 @@ try:
                 .read())
     
         return r.compile(r'Address: (\d+\.\d+\.\d+\.\d+)').search(d).group(1)
-
-    DiscordResp = False
 
     SmartPrint("Loading Binary")
     def BinaryTranslator(str, Binary):
@@ -134,11 +125,7 @@ try:
     engine = pyttsx3.init()
     SmartPrint("Loaded Pytts Engine")
 
-    SmartPrint("Loading Discord Webhooks")
-    webhook_url = "https://discord.com/api/webhooks/1035694277772202057/R_wN-EmTw6spTzHL6Ke5EIUUTvVzqHk46mhBgRPtDROXn4dfRobs0M7N-OsUSMQ8cYFJ"
-    webhook_avatar = "https://cdn.discordapp.com/attachments/1035975783040172092/1046284406463135834/OIP.jpg"
-    SmartPrint("Loaded Discord Webhooks")
-
+    
     voices = engine.getProperty('voices')
     SmartPrint("Get Voice")
 
@@ -322,9 +309,6 @@ try:
             raw_name = i.readlines()
             if not raw_name[0] == name:
                 print(f'H-Bot >> {name} changed name to {raw_name[0]} \n')
-                if DiscordResp == True:
-                    webhook = DiscordWebhook(url="https://discord.com/api/webhooks/1035975956583686284/S627i2PHeCPvfT5aj6-x7_NloiPWDP-mAaCQ96oTlJLuXLUiZaCc9w_zj4HyiHQfZFro", rate_limit_retry=True, content=f'{name} changed name to {raw_name[0]}', username="Hijacker", avatar_url=webhook_avatar)
-                    response = webhook.execute()
             if raw_name == []:
                 name = "NULL"
             else:
@@ -341,11 +325,6 @@ try:
         if Debug == True:
             print(argword)
             print(word)
-
-        if DiscordResp == True:
-            if not word == "" or word == " ":
-                webhook = DiscordWebhook(url="https://discord.com/api/webhooks/1035975956583686284/S627i2PHeCPvfT5aj6-x7_NloiPWDP-mAaCQ96oTlJLuXLUiZaCc9w_zj4HyiHQfZFro", rate_limit_retry=True, content=name + " **Inputted** " +word, username="Hijacker (" + name +")", avatar_url=webhook_avatar)
-                response = webhook.execute()
 
         if word == "autoclick":
             while True:
@@ -508,25 +487,6 @@ try:
             gag_word = input("H-Bot >> GAG to Binary? ")
 
             print(gag(gag_word, 0))
-        
-        if word == "discordtalk" or word == "dt":
-            Talk_Discord = input("H-Bot >> something to say in Hack-A-Gone: ")
-            Name_Discord = input("H-Bot >> Your username in discord: " )
-            password = input("H-Bot >> password for HIJACKER-ADMIN? ")
-
-            if password == passcode_password:
-                webhook = DiscordWebhook(url=webhook_url, rate_limit_retry=True, content=Talk_Discord, username=Name_Discord)
-                response = webhook.execute()
-
-        if word == "spamdiscordtalk" or word == "sdt":
-            Talk_Discord = input("H-Bot >> something to say in the Hack-A-Gone: ")
-            Name_Discord = input("H-Bot >> Your username in discord: " )
-            password = input("H-Bot >> password for HIJACKER-ADMIN? ")
-
-            if password == passcode_password:
-                while True:
-                    webhook = DiscordWebhook(url=webhook_url, rate_limit_retry=False, content=Talk_Discord, username=Name_Discord)
-                    response = webhook.execute()
 
         if word == "binary" or word == "bin":
             bin_word = input("H-Bot >> Text to binary? ")
@@ -546,7 +506,7 @@ try:
             clear()
             os.system("RunHijacker.bat")
         
-        if word == "browser" or word == "internet" or word == "browser":
+        if word == "browser" or word == "internet" or word == "google":
             webbrowser.open('https://www.google.com/')
         
         if word == "shutdown" or word == "SHUTDOWN" or word == "Shutdown": # this will run a command on a sub-shell that will shutdown the computer
@@ -584,33 +544,11 @@ try:
             Morse = encrypt(Morse.upper())
             print(Morse)
         
-        if word == "pfp" or word == "logger":
-            password = input("H-Bot >> password for HIJACKER-ADMIN? ")
-                
-            if password == passcode_password:
-                webhook = DiscordWebhook(url=webhook_url, rate_limit_retry=True, content=webhook_avatar, username="Hijacker", avatar_url=webhook_avatar)
-                response = webhook.execute()
-
-        if word == "hijackerbinary" or word == "hbin":
-            password = input("H-Bot >> password for HIJACKER-ADMIN? ")
-                
-            if password == passcode_password:
-                bin_word = input("H-Bot >> Text to binary? ")
-
-                bin_word = BinaryTranslator(bin_word, 1)
-
-                webhook = DiscordWebhook(url=webhook_url, rate_limit_retry=True, content=bin_word, username="Hijacker", avatar_url=webhook_avatar)
-                response = webhook.execute()
-        
         if word == "pcn" or word == "pcname" or word == "PCNAME":
             print(PcName)
 
         if word == "username":
             print(PcUsername)
-            
-        if word == "dance2":
-            webhook = DiscordWebhook(url="https://discord.com/api/webhooks/1035975956583686284/S627i2PHeCPvfT5aj6-x7_NloiPWDP-mAaCQ96oTlJLuXLUiZaCc9w_zj4HyiHQfZFro", rate_limit_retry=True, content="https://cdn.discordapp.com/attachments/1046300469611466752/1046301057703215114/0001-0250.mp4", username="Hijacker", avatar_url=webhook_avatar)
-            webhook.execute()
         
         if word == "email" or word == "te" or word == "tempmail" or word == "tempmail":
             Spinner()
