@@ -9,7 +9,7 @@ try:
     try:
         import numpy as num
     except:
-        os.system('pip install numpy')
+        os.system('pip3 install numpy')
         import numpy
         os.system('cls')
 
@@ -18,14 +18,14 @@ try:
     try:
         import pyttsx3
     except:
-        os.system("pip install pyttsx3")
+        os.system("pip3 install pyttsx3")
         import pyttsx3
         os.system('cls')
 
     try:
         import pyautogui
     except:
-        os.system("pip install pyautogui")
+        os.system("pip3 install pyautogui")
         import pyautogui
         os.system('cls')
     
@@ -34,14 +34,14 @@ try:
     try:
         from mailtm import Email
     except:
-        os.system("pip install mailtm")
+        os.system("pip3 install mailtm")
         from mailtm import Email
         os.system('cls')
         
     try:
         from pystyle import Write, Colors
     except:
-        os.system("pip install pystyle")
+        os.system("pip3 install pystyle")
         from pystyle import Write, Colors
         os.system('cls')
 
@@ -65,7 +65,7 @@ try:
     def RandomDictPicker(list = [], Letters = 26):
         obj = ""
         for x in range(Letters):
-            obj += list[randint(0, len(list)) - 1]
+            obj += list[random.randint(0, len(list)) - 1]
         return obj
     
     
