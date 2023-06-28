@@ -596,7 +596,7 @@ try:
             else:
                 SmartPrint1(f"Error Application not found..")
         
-        if word == "byte":
+        if word == "Multiply-every-two":
             what_byte = ""
             for x in range(len(argword)):
                 if not argword[x] == "byte":
@@ -615,7 +615,7 @@ try:
                 print(tmp2)
             
             except:
-                SmartPrint1("H-Bot >> Error: Not a Integer or Provided number tio large")
+                SmartPrint1("H-Bot >> Error: Not a Integer or Provided number too large")
 
 #handle Exceptions
 except KeyboardInterrupt:
