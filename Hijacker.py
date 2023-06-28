@@ -386,13 +386,6 @@ try:
                 else:
                     Voice_Is = False
 
-            elif what_edit == "prefix":
-                if Voice_Is:
-                    engine.say("change prefix to what? please change prefix through terminal")
-                    engine.runAndWait()
-                what_prefix = input("H-Bot >> change prefix to what? ")
-                prefix = what_prefix
-
             elif Voice_Is:
                 if what_edit == "voice":
                     engine.say("change voice to female or male? please input through terminal")
@@ -577,19 +570,9 @@ try:
                 except:
                     SmartPrint1("Hjacker-Bot >> Error: We could not connect to the Internet. Perhaps enable wifi if you have it off.")
         
-        if word == "emf":
-            os.system('RunEMF.bat')
         
         if word == "restart":
             os.system("shutdown /r /t 1")
-
-        if word == "inject-roblox":
-            SmartPrint(f"Fetch DLL File")
-            #get the DLL file and store with var
-            SmartPrint(f"Search Roblox-Application")
-
-            RobloxAPPFoundDuringInjection = "RobloxPlayerBeta.exe" in (i.name() for i in psutil.process_iter())
-            SmartPrint(f"Search results: {RobloxAPPFoundDuringInjection}")
 
             if RobloxAPPFoundDuringInjection == True:
                 SmartPrint(f"Inject DLL File To Roblox-Application")
