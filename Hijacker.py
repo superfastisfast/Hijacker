@@ -5,11 +5,17 @@ try:
     import os
     import time
     import random
+    try:
+        import psutil
+    except:
+        os.system('python -m install psutil')
+        import psutil
+        os.system('cls')
 
     try:
         import numpy as num
     except:
-        os.system('pip3 install numpy')
+        os.system('python -m install numpy')
         import numpy
         os.system('cls')
 
@@ -18,14 +24,14 @@ try:
     try:
         import pyttsx3
     except:
-        os.system("pip3 install pyttsx3")
+        os.system("python -m install pyttsx3")
         import pyttsx3
         os.system('cls')
 
     try:
         import pyautogui
     except:
-        os.system("pip3 install pyautogui")
+        os.system("python -m install install pyautogui")
         import pyautogui
         os.system('cls')
     
@@ -34,14 +40,14 @@ try:
     try:
         from mailtm import Email
     except:
-        os.system("pip3 install mailtm")
+        os.system("python -m install mailtm")
         from mailtm import Email
         os.system('cls')
         
     try:
         from pystyle import Write, Colors
     except:
-        os.system("pip3 install pystyle")
+        os.system("python -m install pystyle")
         from pystyle import Write, Colors
         os.system('cls')
 
