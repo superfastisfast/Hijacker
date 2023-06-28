@@ -5,12 +5,6 @@ try:
     import os
     import time
     import random
-    try:
-        import psutil
-    except:
-        os.system('pip install psutil')
-        import psutil
-        os.system('cls')
 
     try:
         import numpy as num
