@@ -27,3 +27,6 @@ Hijacker is released under the [CC-BY License](https://github.com/superfastisfas
 
 ## Contact
 If you have any questions, feedback, or inquiries, you can reach out to us at mmkkaaii@outlook.com. We value your input and are happy to assist you.
+
+
+***Special thanks to the [Turbo Server](https://discord.gg/guW8tbvShV)***
