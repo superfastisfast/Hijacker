@@ -1,4 +1,4 @@
-**# Hijacker
+# Hijacker
 A multi-util command line with 100+ commands.
 
 ## Information
