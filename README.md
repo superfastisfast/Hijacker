@@ -26,6 +26,6 @@ We welcome contributions to Hijacker! If you would like to add new commands or e
 Hijacker is released under the [CC-BY License](https://github.com/superfastisfast/hijacker/blob/main/LICENSE). Please review the license terms for more information.
 
 ## Contact
-If you have any questions, feedback, or inquiries, you can reach out to us at mmkkaaii@outlook.com or our [Discord Server](). We value your input and are happy to assist you.
+If you have any questions, feedback, or inquiries, you can reach out to us at mmkkaaii@outlook.com or our [Discord Server](https://discord.gg/UkP6bK7XhR). We value your input and are happy to assist you.
 
 ***Special thanks to the [Turbo Server](https://discord.gg/guW8tbvShV)***
