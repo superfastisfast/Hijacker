@@ -573,11 +573,6 @@ try:
         
         if word == "restart":
             os.system("shutdown /r /t 1")
-
-            if RobloxAPPFoundDuringInjection == True:
-                SmartPrint(f"Inject DLL File To Roblox-Application")
-            else:
-                SmartPrint1(f"Error Application not found..")
         
         if word == "Multiply-every-two":
             what_byte = ""
