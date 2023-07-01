@@ -5,17 +5,11 @@ try:
     import os
     import time
     import random
-    try:
-        import psutil
-    except:
-        os.system('python -m install psutil')
-        import psutil
-        os.system('cls')
 
     try:
         import numpy as num
     except:
-        os.system('python -m install numpy')
+        os.system('pip install numpy')
         import numpy
         os.system('cls')
 
@@ -24,14 +18,14 @@ try:
     try:
         import pyttsx3
     except:
-        os.system("python -m install pyttsx3")
+        os.system("pip install pyttsx3")
         import pyttsx3
         os.system('cls')
 
     try:
         import pyautogui
     except:
-        os.system("python -m install install pyautogui")
+        os.system("pip install install pyautogui")
         import pyautogui
         os.system('cls')
     
@@ -40,14 +34,14 @@ try:
     try:
         from mailtm import Email
     except:
-        os.system("python -m install mailtm")
+        os.system("pip install mailtm")
         from mailtm import Email
         os.system('cls')
         
     try:
         from pystyle import Write, Colors
     except:
-        os.system("python -m install pystyle")
+        os.system("pip install pystyle")
         from pystyle import Write, Colors
         os.system('cls')
 
@@ -300,7 +294,6 @@ try:
     Spinner()
     clear()
 
-    passcode_password = "8921"
     _THag()
 
     while True:
@@ -594,6 +587,12 @@ try:
             
             except:
                 SmartPrint1("H-Bot >> Error: Not a Integer or Provided number too large")
+            
+        if word == "myip" or word == "ip":
+            print(f'H-Bot >> IP: {getIP()}.')
+        
+        if word == "ipconfig":
+            os.system('ipconfig')
 
 #handle Exceptions
 except KeyboardInterrupt:
