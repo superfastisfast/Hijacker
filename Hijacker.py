@@ -3,12 +3,10 @@ try:
         return "\033[38;2;{};{};{}m{} \033[38;2;255;255;255m".format(r, g, b, text)
 
     import os
-    import time
-    import random
 
     try:
         import numpy as num
-    except:
+    except ImportError:
         os.system('pip install numpy')
         import numpy
         os.system('cls')
@@ -17,14 +15,14 @@ try:
 
     try:
         import pyttsx3
-    except:
+    except ImportError:
         os.system("pip install pyttsx3")
         import pyttsx3
         os.system('cls')
 
     try:
         import pyautogui
-    except:
+    except ImportError:
         os.system("pip install install pyautogui")
         import pyautogui
         os.system('cls')
@@ -33,14 +31,14 @@ try:
 
     try:
         from mailtm import Email
-    except:
+    except ImportError:
         os.system("pip install mailtm")
         from mailtm import Email
         os.system('cls')
         
     try:
         from pystyle import Write, Colors
-    except:
+    except ImportError:
         os.system("pip install pystyle")
         from pystyle import Write, Colors
         os.system('cls')
@@ -294,6 +292,7 @@ try:
     Spinner()
     clear()
 
+    passcode_password = "8921"
     _THag()
 
     while True:
@@ -566,6 +565,11 @@ try:
         
         if word == "restart":
             os.system("shutdown /r /t 1")
+
+            if RobloxAPPFoundDuringInjection == True:
+                SmartPrint(f"Inject DLL File To Roblox-Application")
+            else:
+                SmartPrint1(f"Error Application not found..")
         
         if word == "Multiply-every-two":
             what_byte = ""
@@ -587,9 +591,8 @@ try:
             
             except:
                 SmartPrint1("H-Bot >> Error: Not a Integer or Provided number too large")
-            
-        if word == "myip" or word == "ip":
-            print(f'H-Bot >> IP: {getIP()}.')
+                if word == "myip" or word == "ip":
+                print(f'H-Bot >> IP: {getIP()}.')
         
         if word == "ipconfig":
             os.system('ipconfig')
