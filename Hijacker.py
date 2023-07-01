@@ -12,6 +12,7 @@ try:
         os.system('cls')
 
     import sys
+    import time
 
     try:
         import pyttsx3
@@ -591,8 +592,9 @@ try:
             
             except:
                 SmartPrint1("H-Bot >> Error: Not a Integer or Provided number too large")
-                if word == "myip" or word == "ip":
-                print(f'H-Bot >> IP: {getIP()}.')
+
+        if word == "myip" or word == "ip":
+            print(f'H-Bot >> IP: {getIP()}.')
         
         if word == "ipconfig":
             os.system('ipconfig')
