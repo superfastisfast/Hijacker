@@ -171,7 +171,7 @@ try:
     PcUsername = os.getenv("USERNAME")
     PcName = os.getenv("COMPUTERNAME")
 
-    ver = "1.12"
+    ver = "PRE-1"
     SmartPrint("Loaded Version")
 
 
